@@ -45,7 +45,10 @@ mongod
 *.bak
 *.swp
 # =========== TODO: FIX THIS (make it ignore only built CSS files)
+# we should still include 'inspinia' folder too
 # *.css
+# but exclude files that were built with task runner
+public/modules/**/*.css
 
 app/logs/
 app/build/
