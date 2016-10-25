@@ -1,3 +1,6 @@
+#=================================
+# TODO: this is root/.gitignore file
+# TODO: this needs detailed merge & refactoring
 
 # User-specific stuff:
 .idea/
@@ -41,7 +44,8 @@ mongod
 *.tmp
 *.bak
 *.swp
-*.css
+# =========== TODO: FIX THIS (make it ignore only built CSS files)
+# *.css
 
 app/logs/
 app/build/
@@ -52,3 +56,72 @@ app/app/**/*.map
 app/public/**/*.map
 
 app/public/modules/users/img/profiles/*
+
+#=================================
+# ignore below is a copy
+# from root/app/.gitignore
+# TODO: this needs detailed merge & refactoring
+
+# iOS / Apple
+# ===========
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+config/env/local.js
+
+# Node and related ecosystem
+# ==========================
+.nodemonignore
+.sass-cache/
+npm-debug.log
+node_modules/
+public/lib/
+app/tests/coverage/
+.bower-*/
+.idea/
+
+# MEAN.js app and assets
+# ======================
+config/sslcerts/*.pem
+access.log
+public/dist/
+
+# Sublime editor
+# ==============
+.sublime-project
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse project files
+# =====================
+.project
+.settings/
+.*.md.html
+.metadata
+*~.nib
+local.properties
+
+# IntelliJ
+# ========
+*.iml
+
+# Cloud9 IDE
+# =========
+.c9/
+data/
+mongod
+
+# General
+# =======
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.tmp
+*.bak
+*.swp
+logs/
+build/
