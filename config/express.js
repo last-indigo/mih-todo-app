@@ -29,7 +29,7 @@ module.exports = function(db) {
 	var app = express();
 
 	// Globbing model files
-	config.getGlobbedFiles('./server-app_temporary-name/models/**/*.js').forEach(function(modelPath) {
+	config.getGlobbedFiles('./server-app-folder/models/**/*.js').forEach(function(modelPath) {
 		require(path.resolve(modelPath));
 	});
 
@@ -64,7 +64,7 @@ module.exports = function(db) {
 
 	// Set views path and view engine
 	app.set('view engine', 'server.view.html');
-	app.set('views', './server-app_temporary-name/views');
+	app.set('views', './server-app-folder/views');
 
 	// Enable logger (morgan)
 	app.use(morgan(logger.getLogFormat(), logger.getLogOptions()));
@@ -118,7 +118,7 @@ module.exports = function(db) {
 	app.use(flash());
 
 	// Globbing routing files
-	config.getGlobbedFiles('./server-app_temporary-name/routes/**/*.js').forEach(function(routePath) {
+	config.getGlobbedFiles('./server-app-folder/routes/**/*.js').forEach(function(routePath) {
 		require(path.resolve(routePath))(app);
 	});
 

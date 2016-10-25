@@ -6,7 +6,7 @@ angular.module('schedule-notifications').controller('ScheduleNotificationsContro
 	function($scope, $rootScope, $stateParams, Authentication, ScheduleNotifications, $interval, $location, $state, Slots, Tasks, Notification) {
 		$scope.authentication = Authentication;
 		
-        // TODO: move to common server-app_temporary-name config
+        // TODO: move to common server-app-folder config
         var notificationsInterval = 1800000; // 30 min
 
 		$rootScope.$on('NEW_TASK_MODIFY', () => {

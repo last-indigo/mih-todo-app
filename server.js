@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-require('./server-app_temporary-name/models/user.server.model');
+require('./server-app-folder/models/user.server.model');
 var init = require('./config/init')(),
 	config = require('./config/config'),
 	mongoose = require('mongoose'),
