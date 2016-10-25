@@ -25,7 +25,7 @@ var fs = require('fs'),
 	path = require('path');
 
 module.exports = function(db) {
-	// Initialize express server-app_temporary-name
+	// Initialize express app
 	var app = express();
 
 	// Globbing model files
@@ -91,7 +91,7 @@ module.exports = function(db) {
 	app.use(helmet.ienoopen());
 	app.disable('x-powered-by');
 
-	// Setting the server-app_temporary-name router and static folder
+	// Setting the app router and static folder
 	app.use(express.static(path.resolve('./public')));
 
 	// CookieParser should be above session
